@@ -1,16 +1,18 @@
-## Hi there 👋
 
-<!--
-**Imperiumbar/imperiumbar** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Imperium Bar Website
 
-Here are some ideas to get you started:
+Este repositorio contiene el sitio web oficial de **Imperium Bar**, un gastrobar deportivo con estilo moderno y lujoso.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Estructura del sitio
+- `index.html` — Página principal
+- `css/style.css` — Estilos personalizados
+- `js/script.js` — Comportamiento básico en JavaScript
+
+## Publicación en GitHub Pages
+1. Ir a **Settings** del repositorio.
+2. Buscar la sección **Pages**.
+3. Seleccionar la rama `main` y la carpeta `/root`.
+4. Guardar y acceder a la URL generada.
+
+## Vista previa
+Diseñado con colores modernos (`#f4b400`) y tipografías elegantes de Google Fonts.
