@@ -1,110 +1,576 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMPERIUM GASTRO BAR</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .menu-item {
+            transition: all 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
 </head>
-<body>
-    <header>
-        <h1>IMPERIUM GASTRO BAR</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Sobre Nosotros</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#eventos">Eventos</a></li>
-                <li><a href="#reservas">Reservas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+<body class="font-sans bg-gray-100">
+    <!-- Header/Navbar -->
+    <header class="bg-black text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl md:text-3xl font-bold text-yellow-400">IMPERIUM <span class="text-white">GASTRO BAR</span></h1>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="hover:text-yellow-400 transition">Inicio</a>
+                <a href="#menu" class="hover:text-yellow-400 transition">Menú</a>
+                <a href="#galeria" class="hover:text-yellow-400 transition">Galería</a>
+                <a href="#eventos" class="hover:text-yellow-400 transition">Eventos</a>
+                <a href="#reservas" class="hover:text-yellow-400 transition">Reservas</a>
+                <a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black pb-4 px-4">
+            <a href="#inicio" class="hover:text-yellow-400 transition">Inicio</a>
+            <a href="#menu" class="hover:text-yellow-400 transition">Menú</a>
+            <a href="#galeria" class="hover:text-yellow-400 transition">Galería</a>
+            <a href="#eventos" class="hover:text-yellow-400 transition">Eventos</a>
+            <a href="#reservas" class="hover:text-yellow-400 transition">Reservas</a>
+            <a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a>
+        </div>
     </header>
-    
-    <section id="inicio" class="hero">
-        <h1>Bienvenidos a IMPERIUM GASTRO BAR</h1>
-        <p>Donde el buen gusto se convierte en experiencia</p>
-	<p>En el corazón de la ciudad nace un espacio donde la excelencia no es un detalle, sino la norma. IMPERIUM Gastro Bar te abre sus puertas para que vivas una experiencia única que combina lo mejor de la alta coctelería, la estética sofisticada y el ambiente vibrante de un lugar hecho para disfrutar.
-	Aquí, cada copa cuenta una historia, cada rincón refleja carácter, y cada visita deja huella.
-	Estás en casa. Estás en IMPERIUM.El lugar perfecto para disfrutar los mejores eventos deportivos, bebidas premium y un ambiente único.
-	</p>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fadeIn">IMPERIUM GASTRO BAR</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fadeIn delay-1">Donde el buen gusto se convierte en experiencia</p>
+            <p class="text-xl md:text-2xl mb-8 animate-fadeIn delay-1">
+             Nace un espacio donde la excelencia no es un detalle, sino la norma. IMPERIUM Gastro Bar te abre sus puertas para que vivas una experiencia única que combina lo mejor de la alta coctelería, la estética sofisticada y el ambiente vibrante de un lugar hecho para disfrutar.   
+            </p>
+            <p class="text-xl md:text-2xl mb-8 animate-fadeIn delay-1">
+             Aquí, cada copa cuenta una historia, cada rincón refleja carácter, y cada visita deja huella.   
+            </p>
+            <p class="text-xl md:text-2xl mb-8 animate-fadeIn delay-1">
+                Estás en casa. Estás en IMPERIUM.El lugar perfecto para disfrutar los mejores eventos deportivos, bebidas premium y un ambiente único.
+            </p>
+            <a href="#reservas" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-lg transition animate-fadeIn delay-2">Reserva ahora</a>
+        </div>
     </section>
-    
-    <section id="nosotros">
-        <h2>Sobre Nosotros</h2>
-        <p>En IMPERIUM elevamos el arte de compartir y disfrutar. Somos un gastro bar que fusiona elegancia, autenticidad y pasión por el buen beber, donde cada trago es una obra y cada visita, un ritual.
-	Nuestra razón de ser es crear momentos memorables a través de una propuesta que combina sabores de alto nivel, un ambiente cuidadosamente diseñado y un servicio que marca la diferencia.
-	Nuestro propósito es trascender: consolidarnos como un ícono de exclusividad, creatividad y estilo, y expandir nuestro legado a nuevos destinos.
-	IMPERIUM no es solo un bar. Es una experiencia que deja marca.
-	</p>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8 animate-fadeIn">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Sobre Nosotros</h2>
+                    <p class="text-gray-600 mb-4">En IMPERIUM elevamos el arte de compartir y disfrutar. Somos un gastro bar que fusiona elegancia, autenticidad y pasión por el buen beber, donde cada trago es una obra y cada visita, un ritual.</p>
+                    <p class="text-gray-600">Nuestra razón de ser es crear momentos memorables a través de una propuesta que combina sabores de alto nivel, un ambiente cuidadosamente diseñado y un servicio que marca la diferencia.</p>
+                    <p class="text-gray-600">Nuestro propósito es trascender, consolidarnos como un ícono de exclusividad, creatividad y estilo, y expandir nuestro legado a nuevos destinos.
+	                IMPERIUM no es solo un bar. Es una experiencia que deja marca.</p>
+                </div>
+                <div class="md:w-1/2 animate-fadeIn delay-1">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Interior del restaurante" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <section id="menu" >
-        <h2>Menú</h2>
-        <ul>
-			<li><a  href="#cocteles">Cócteles  </a></li>
-			<p>     </p>
-			<li><a href="#cervezas">Cervezas</a></li>
-			<p>     </p>
-			<li><a href="#licores">Licores</a></li>
-			<p>     </p>
-			<li><a href="#vinos">Fusion & Frutas </a></li>
-			<p>     </p>
-			<li><a href="#snacks">Para Picar y Compartir</a></li>
-        </ul>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800">Nuestro Menú</h2>
+            <!-- Selección menú-->
+            <a href="#coctel" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-lg transition animate-fadeIn delay-2">Cócteles</a>
+            <a href="#cervezas" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-lg transition animate-fadeIn delay-2">Cervezas</a>
+            <a href="#licores" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-lg transition animate-fadeIn delay-2">Licores</a>
+            <a href="#vinos" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-lg transition animate-fadeIn delay-2">Fusion & frutas</a>
+            <a href="#snacks" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-lg transition animate-fadeIn delay-2">Para Picar y Compartir<a>
+        </div>
     </section>
-	
-    <section id="cervezas" class="cervezas-grid">
-		<h2>Cervezas</h2>
-			<div >
-				<p><span>Corona</span><span>$15.000</span></p>
-				<p><span>Stella</span><<span>$15.000</span></p>
-				<p><span>Bludweiser</span><span>$15.000</span></p>
-				<p><span>Heineken</span><span>$15.000</span></p>
-			</div>
-			<div >
-				<p><span>Club Colombia</span><span>$10.000</span></p>
-				<p><span>Aguila</span><span>$10.000</span></p>
-				<p><span>Aguila Ligth</span><span>$10.000</span></p>
-				<p><span>Costeña</span><span>$10.000</span></p>
-				<p><span>Poker</span><span>$10.000</span></p>
-			</div>
-	</section>
-    <section id="eventos">
-        <h2>Próximos Eventos</h2>
-        <p>Vive cada gol, canasta y punto en nuestras pantallas gigantes. ¡No te pierdas la emoción!</p>
-    </section>
-    
-    <section id="reservas">
-        <h2>Reservas</h2>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
+
+    <section id="coctel" class="py-16 bg-gray-100">    
+        <!-- Selección menú-->
+         <div class="container mx-auto px-4"> 
+            <!-- Cocteles -->
+            <div class="mb-16 animate-fadeIn">
+                <h3 class="text-2xl font-semibold mb-6 text-yellow-600 border-b-2 border-yellow-400 pb-2">Cócteles - Clásicos del Bar</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Margarita" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Margarita</h4>
+                            <p class="text-gray-600 mb-4">Tequila, triple sec y jugo de limón.</p>
+                             <p class="text-gray-600 mb-4">Versiones: Clásica · Maracuyá · Mango · Fresa</p>
+                            <p class="text-yellow-600 font-bold">$24.900</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Mojito Clásico" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Mojito Clásico</h4>
+                            <p class="text-gray-600 mb-4">Ron blanco, hierbabuena, limón y soda.</p>
+                            <p class="text-yellow-600 font-bold">$23.900</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cosmopolitan " class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Cosmopolitan</h4>
+                            <p class="text-gray-600 mb-4">Vodka, triple sec, jugo de arándano y un toque de limón.</p>
+                            <p class="text-yellow-600 font-bold">$25.900</p>
+                        </div>
+                    </div>
+                     <!-- Menu Item 4 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Negroni" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Negroni</h4>
+                            <p class="text-gray-600 mb-4">Gin, vermut rojo y Campari.</p>
+                            <p class="text-yellow-600 font-bold">$29.900</p>
+                        </div>
+                    </div>
+                     <!-- Menu Item 5 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Old Fashioned" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Old Fashioned</h4>
+                            <p class="text-gray-600 mb-4">Bourbon, azúcar, angostura y twist de naranja.</p>
+                            <p class="text-yellow-600 font-bold">$28.900</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+            <!-- Cocteles principales -->
+            <div class="mb-16 animate-fadeIn delay-1">
+                <h3 class="text-2xl font-semibold mb-6 text-yellow-600 border-b-2 border-yellow-400 pb-2">Cócteles - IMPERIUM</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Instinto Real" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Instinto Real</h4>
+                            <p class="text-gray-600 mb-4">Whisky, maracuyá, miel de agave y rodaja de naranja flameada.</p>
+                            <p class="text-yellow-600 font-bold">$28.900</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="Flore de Venus" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Flor de Venus</h4>
+                            <p class="text-gray-600 mb-4">Vodka, maracuyá, limón, sirope de cereza o frutos rojos, albahaca fresca, top de agua con gas, decorado con rodaja de fresa y hielo en esfera o diamante.</p>
+                            <p class="text-yellow-600 font-bold">$29.900</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1565299624943-baea1379647c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80" alt="Esencia de Roma" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Esencia de Roma</h4>
+                            <p class="text-gray-600 mb-4">Ginebra, sirope de mora, limón y albahaca fresca.</p>
+                            <p class="text-yellow-600 font-bold">$27.900</p>
+                        </div>
+                    </div>
+
+                     <!-- Menu Item 4 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1565299624943-baea1379647c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80" alt="Furia del Coliseo" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Furia del Coliseo</h4>
+                            <p class="text-gray-600 mb-4">Tequila, jengibre, limón y soda de limón.</p>
+                            <p class="text-yellow-600 font-bold">$26.900</p>
+                        </div>
+                    </div>
+                      <!-- Menu Item 5 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1565299624943-baea1379647c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80" alt="Trono Carmesí" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Trono Carmesí</h4>
+                            <p class="text-gray-600 mb-4">Ron oscuro, frutos rojos, hierbabuena y un toque de vino tinto.</p>
+                            <p class="text-yellow-600 font-bold">$27.900</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha" required>
             
-            <label for="personas">Número de Personas:</label>
-            <input type="number" id="personas" name="personas" min="1" required>
-            
-            <button type="submit">Reservar</button>
-        </form>
     </section>
-    
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Visítanos en Jamundí, Colombia o contáctanos a través de nuestras redes sociales.</p>
+
+ <!-- Cervezas-->
+     <section id="cervezas" class="py-16 bg-gray-100"> 
+        <div class="container mx-auto px-4">  
+            <div class="animate-fadeIn delay-2">
+                <h3 class="text-2xl font-semibold mb-6 text-yellow-600 border-b-2 border-yellow-400 pb-2">Cervezas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" alt="Corona" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Corona</h4>
+                            <p class="text-gray-600 mb-4">Refrescante y suave, perfecta para disfrutar con limón en cualquier ocasión.</p>
+                            <p class="text-yellow-600 font-bold">$12.000</p>
+                        </div>
+                    </div>
+
+                     
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1557&q=80" alt="Stella" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Stella</h4>
+                            <p class="text-gray-600 mb-4">Elegancia belga con sabor equilibrado y final limpio. Tradición cervecera premium.</p>
+                            <p class="text-yellow-600 font-bold">$12.000</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80" alt="Bludweiser" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Bludweiser</h4>
+                            <p class="text-gray-600 mb-4">Sabor americano clásico, con cuerpo ligero y aroma distintivo. Ideal para compartir.</p>
+                            <p class="text-yellow-600 font-bold">$10.000</p>
+                        </div>
+                    </div>
+
+                     <!-- Menu Item 4 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80" alt="Heineken" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Heinekein</h4>
+                            <p class="text-gray-600 mb-4">Cerveza europea de carácter firme, con notas herbales y un final refrescante.</p>
+                            <p class="text-yellow-600 font-bold">$10.000</p>
+                        </div>
+                    </div>
+                 <!-- Menu Item 5 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80" alt="Club" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Club Colombia</h4>
+                            <p class="text-gray-600 mb-4">Dorada y suave, con equilibrio perfecto entre malta y amargor.</p>
+                            <p class="text-yellow-600 font-bold">$10.000</p>
+                        </div>
+                    </div>
+                 <!-- Menu Item 6 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80" alt="Aguila" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Aguila</h4>
+                            <p class="text-gray-600 mb-4">Tradicional, ligera y refrescante. La favorita de muchas celebraciones colombianas.</p>
+                            <p class="text-yellow-600 font-bold">$8.000</p>
+                        </div>
+                    </div>
+                 <!-- Menu Item 7 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80" alt="AguilaL" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Aguila Ligth</h4>
+                            <p class="text-gray-600 mb-4"> Suave, baja en calorías, ideal para refrescar sin perder el sabor.</p>
+                            <p class="text-yellow-600 font-bold">$8.000</p>
+                        </div>
+                    </div>
+                 <!-- Menu Item 8 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80" alt="Heineken" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Poker</h4>
+                            <p class="text-gray-600 mb-4">Amigable, ligera y colombiana. Hecha para brindar entre amigos sin complicaciones.</p>
+                            <p class="text-yellow-600 font-bold">$8.000</p>
+                        </div>
+                    </div>
+                 <!-- Menu Item 9 -->
+                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1547&q=80" alt="Costeña" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold mb-2">Costeña</h4>
+                            <p class="text-gray-600 mb-4">Auténtica del Caribe colombiano, ligera y fácil de tomar.</p>
+                            <p class="text-yellow-600 font-bold">$8.000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    <footer>
-        <p>© 2025 IMPERIUM BAR. Todos los derechos reservados.</p>
+
+    <!-- Events Section -->
+    <section id="eventos" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800">Próximos Eventos</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Noche de DJ" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Noche de DJ</h3>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-calendar-alt mr-2 text-yellow-500"></i> Viernes, 15 de Diciembre</p>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-clock mr-2 text-yellow-500"></i> 21:00 - 02:00</p>
+                        <p class="text-gray-600 mb-4">Disfruta de la mejor música electrónica con nuestro DJ residente y cócteles especiales para la ocasión.</p>
+                        <a href="#reservas" class="text-yellow-500 font-semibold hover:text-yellow-600 transition">Reservar mesa →</a>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a3d78f9368d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Degustación de Whisky" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Degustación de Whisky</h3>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-calendar-alt mr-2 text-yellow-500"></i> Jueves, 21 de Diciembre</p>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-clock mr-2 text-yellow-500"></i> 20:00 - 23:00</p>
+                        <p class="text-gray-600 mb-4">Descubre los secretos de los mejores whiskies del mundo con nuestro experto en destilados.</p>
+                        <a href="#reservas" class="text-yellow-500 font-semibold hover:text-yellow-600 transition">Reservar mesa →</a>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Noche de Cócteles Clásicos" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Noche de Cócteles Clásicos</h3>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-calendar-alt mr-2 text-yellow-500"></i> Sábado, 30 de Diciembre</p>
+                        <p class="text-gray-600 mb-4"><i class="fas fa-clock mr-2 text-yellow-500"></i> 20:00 - 01:00</p>
+                        <p class="text-gray-600 mb-4">Revive los clásicos de la coctelería mundial preparados por nuestros bartenders con un toque IMPERIUM.</p>
+                        <a href="#reservas" class="text-yellow-500 font-semibold hover:text-yellow-600 transition">Reservar mesa →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800">Galería</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Restaurante" class="w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Barra" class="w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Terraza" class="w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Plato 1" class="w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Plato 2" class="w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1565299624943-baea1379647c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1381&q=80" alt="Plato 3" class="w-full h-64 object-cover rounded-lg shadow-md hover:opacity-90 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservas" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center">Reserva tu mesa</h2>
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nombre" class="block mb-2">Nombre completo</label>
+                        <input type="text" id="nombre" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-yellow-400">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-yellow-400">
+                    </div>
+                    <div>
+                        <label for="telefono" class="block mb-2">Teléfono</label>
+                        <input type="tel" id="telefono" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-yellow-400">
+                    </div>
+                    <div>
+                        <label for="personas" class="block mb-2">Número de personas</label>
+                        <select id="personas" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-yellow-400">
+                            <option>1 persona</option>
+                            <option>2 personas</option>
+                            <option>3 personas</option>
+                            <option>4 personas</option>
+                            <option>5 personas</option>
+                            <option>6 personas</option>
+                            <option>Grupo (+6 personas)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="fecha" class="block mb-2">Fecha</label>
+                        <input type="date" id="fecha" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-yellow-400">
+                    </div>
+                    <div>
+                        <label for="hora" class="block mb-2">Hora</label>
+                        <select id="hora" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-yellow-400">
+                            <option>13:00</option>
+                            <option>13:30</option>
+                            <option>14:00</option>
+                            <option>14:30</option>
+                            <option>20:00</option>
+                            <option>20:30</option>
+                            <option>21:00</option>
+                            <option>21:30</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="comentarios" class="block mb-2">Comentarios adicionales</label>
+                        <textarea id="comentarios" rows="3" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-yellow-400"></textarea>
+                    </div>
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full text-lg transition">Confirmar reserva</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-gray-800">Contacto</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Información de contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-yellow-500 mt-1 mr-4"></i>
+                            <p>Calle Imperio, 123<br>28001 Madrid, España</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-yellow-500 mr-4"></i>
+                            <p>+34 91 123 45 67</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-yellow-500 mr-4"></i>
+                            <p>reservas@imperiumgastrobar.com</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-yellow-500 mr-4"></i>
+                            <p>Lunes a Domingo<br>13:00 - 16:00 / 20:00 - 00:00</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold mt-8 mb-4 text-gray-800">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-700 hover:text-yellow-500 transition"><i class="fab fa-facebook-f text-2xl"></i></a>
+                        <a href="#" class="text-gray-700 hover:text-yellow-500 transition"><i class="fab fa-instagram text-2xl"></i></a>
+                        <a href="https://articulo.mercadolibre.com.co/MCO-1543591645-teclado-apple-magic-keyboard-con-teclado-numerico-mb110beb-_JM?searchVariation=182929199624#polycard_client=search-nordic&searchVariation=182929199624&position=17&search_layout=stack&type=item&tracking_id=afd29466-0eb7-44c9-b514-b60d7a8512bf" class="text-gray-700 hover:text-yellow-500 transition"><i class="fab fa-twitter text-2xl"></i></a>
+                        <a href="#" class="text-gray-700 hover:text-yellow-500 transition"><i class="fab fa-tripadvisor text-2xl"></i></a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="h-full w-full rounded-lg overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.430272873634!2d-3.703790384603997!3d40.41677547936472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e9a4a2c2d%3A0x3acc822c15c3e476!2sPuerta%20del%20Sol%2C%20Madrid!5e0!3m2!1sen!2ses!4v1623251234567!5m2!1sen!2ses" width="100%" height="100%" style="min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-bold text-yellow-400">IMPERIUM <span class="text-white">GASTRO BAR</span></h2>
+                    <p class="text-gray-400 mt-2">© 2023 Todos los derechos reservados</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Aviso legal</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-yellow-400 text-black w-12 h-12 rounded-full shadow-lg flex items-center justify-center hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Form submission
+        const reservationForm = document.querySelector('form');
+        if (reservationForm) {
+            reservationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('¡Gracias por tu reserva! Te contactaremos para confirmarla.');
+                this.reset();
+            });
+        }
+    </script>
 </body>
 </html>
