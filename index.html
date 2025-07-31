@@ -38,7 +38,7 @@
         .delay-3 { animation-delay: 0.6s; }
     </style>
 </head>
-<body class="font-sans bg-gray-100">
+<body class="font-sans bg-black">
     <!-- Header/Navbar -->
     <header class="bg-black text-white sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -53,11 +53,10 @@
             <nav class="hidden md:flex space-x-8">
                 <a href="#inicio" class="hover:text-yellow-400 transition">Inicio</a>
                 <a href="#menu" class="hover:text-yellow-400 transition">Menú</a>
-               <!-- <a href="#galeria" class="hover:text-yellow-400 transition">Galería</a>
+               <a href="#galeria" class="hover:text-yellow-400 transition">Galería</a>
                 <a href="#eventos" class="hover:text-yellow-400 transition">Eventos</a>
                 <a href="#reservas" class="hover:text-yellow-400 transition">Reservas</a>
                 <a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a>
-		    -->
             </nav>
         </div>
         
@@ -65,8 +64,8 @@
         <div id="mobile-menu" class="hidden md:hidden bg-black pb-4 px-4">
             <a href="#inicio" class="hover:text-yellow-400 transition">Inicio</a>
             <a href="#menu" class="hover:text-yellow-400 transition">Menú</a>
-	<!-- <a href="#galeria" class="hover:text-yellow-400 transition">Galería</a>
-           <a href="#eventos" class="hover:text-yellow-400 transition">Eventos</a>
+	    <a href="#galeria" class="hover:text-yellow-400 transition">Galería</a>
+            <a href="#eventos" class="hover:text-yellow-400 transition">Eventos</a>
             <a href="#reservas" class="hover:text-yellow-400 transition">Reservas</a>
             <a href="#contacto" class="hover:text-yellow-400 transition">Contacto</a> -->
         </div>
@@ -116,11 +115,12 @@
             <!-- Menu Navigation -->
             <div class="flex flex-wrap justify-center gap-4 mb-12">
                 <a href="#coctel" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-md animate-fadeIn delay-2">Cócteles</a>
+		<a href="#sadas" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-md animate-fadeIn delay-2">Sodas</a>    
                 <a href="#cervezas" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-md animate-fadeIn delay-2">Cervezas</a>
                 <a href="#licores" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-md animate-fadeIn delay-2">Licores</a>
-                <a href="#vinos" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-md animate-fadeIn delay-2">Fusion & Frutas</a>
                 <a href="#snacks" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-md animate-fadeIn delay-2">Para Picar</a>
-            </div>
+		<a href="#agua" class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-md animate-fadeIn delay-2">Aguas y Refresco</a>
+	    </div>
         </div>
     </section>
 
@@ -131,38 +131,45 @@
             <div class="mb-16 animate-fadeIn">
                 <h3 class="text-2xl font-semibold mb-6 text-yellow-600 border-b-2 border-yellow-400 pb-2">RITUALES DEL TRONO</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Menu Item 1 -->
+           <!-- Menu Item 1 -->
 	    	<div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
-    			<div class="w-full h-48 overflow-hidden">
-        		<img src="https://imperiumbar.github.io/imperiumbar/imagenes/margarita.jpeg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
-            		alt="Margarita" 
-                 	class="w-full h-full object-cover object-center"
-        		>
-    			</div>
-		    <div class="p-6">
-			<h4 class="text-xl font-bold mb-2">Imperial Clásica</h4>
-			<p class="text-gray-600 mb-4">
-			    El equilibrio perfecto entre lo cítrico y lo intenso. José Cuervo Reposado, servido con borde de sal e hielo. Una leyenda de la coctelería.
-			</p>
-			<p class="text-gray-600 mb-4">
-			    Versiones: Clásica · Maracuyá · Mango · Fresa
-			</p>
-			<p class="text-yellow-600 font-bold">$24.900</p>
-		    </div>
-		</div>
+    	   		<div class="w-full h-48 overflow-hidden">
+		           <img 
+		            src="https://imperiumbar.github.io/imperiumbar/imagenes/margarita.jpeg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+		            alt="Margarita" 
+		            class="w-full h-full object-cover object-center"
+		           >
+	     	 	</div>
+		   	 <div class="p-6">
+			        <h4 class="text-xl font-bold mb-2">Imperial Exótica</h4>
+			        <p class="text-gray-600 mb-4">
+			            El equilibrio perfecto entre lo cítrico y lo intenso. José Cuervo Reposado, servido con borde de sal e hielo. Una leyenda de la coctelería.
+			        </p>
+			        <p class="text-gray-600 mb-4">
+			            Versiones: Clásica · Maracuyá · Kiwi
+			        </p>
+			        <p class="text-yellow-600 font-bold">$29.900</p>
+		    	</div>
+	     </div>
                     
                     <!-- Menu Item 2 -->
-                    <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
-                        <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
-				alt="Mojito Clásico" 
-				class="w-full h-full object-cover object-center">
-                        <div class="p-6">
-                            <h4 class="text-xl font-bold mb-2">Mojito Clásico</h4>
-                            <p class="text-gray-600 mb-4">Ron blanco, hierbabuena, limón y soda.</p>
-                            <p class="text-yellow-600 font-bold">$23.900</p>
-                        </div>
-                    </div>
                     
+            <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+    	   		<div class="w-full h-48 overflow-hidden">
+		           <img 
+		            src="https://imperiumbar.github.io/imperiumbar/imagenes/mojito.jpeg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+		            alt="Mojito" 
+		            class="w-full h-full object-cover object-center"
+		           >
+	     	 	</div>
+		   	 <div class="p-6">
+			        <h4 class="text-xl font-bold mb-2">Aura de Menta</h4>
+			        <p class="text-gray-600 mb-4">
+			           Ron blanco, zumo de limón fresco, sirope simple, hierbabuena macerada y soda. Un clásico cubano reinterpretado con elegancia, frescura y carácter.
+			        </p>
+			        <p class="text-yellow-600 font-bold">$26.900</p>
+		    	</div>
+	     </div>    
                     <!-- Menu Item 3 -->
                     <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
                         <img src="https://imperiumbar.github.io/imperiumbar/imagenes/moscow.jpeg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
@@ -173,7 +180,7 @@
                             <p class="text-gray-600 mb-4">Una mezcla clásica con carácter refrescante.
 		            Vodka premium, jengibre picante, zumo de limón fresco y soda, servido en vaso metálico con hielo abundante y menta.
 			    Fresco, picante y vibrante. El cóctel perfecto para abrir la noche con estilo.</p>
-                            <p class="text-yellow-600 font-bold">$25.900</p>
+                            <p class="text-yellow-600 font-bold">30.900</p>
                         </div>
                     </div>
                      <!-- Menu Item 4 -->
